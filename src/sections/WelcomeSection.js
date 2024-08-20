@@ -15,7 +15,7 @@ function WelcomeSection() {
     >
       <div className="mt-5 w-full max-md:mt-10 max-md:max-w-full">
         <div
-          className="flex gap-5 px-16 max-md:flex-col max-md:gap-0"
+          className="flex gap-5 px-16 max-lg:px-5 max-md:flex-col-reverse max-md:gap-0"
           style={{
             backgroundImage: `url('${process.env.PUBLIC_URL}/img/body-bg.svg')`,
             backgroundSize: "70%",
