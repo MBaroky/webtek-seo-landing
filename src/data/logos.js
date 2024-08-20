@@ -1,0 +1,21 @@
+const { PUBLIC_URL } = process.env;
+export const logos = [
+  `${PUBLIC_URL}/img/logos/LOGOS-01.png`,
+  `${PUBLIC_URL}/img/logos/LOGOS-02.png`,
+  `${PUBLIC_URL}/img/logos/LOGOS-03.png`,
+  `${PUBLIC_URL}/img/logos/LOGOS-04.png`,
+  `${PUBLIC_URL}/img/logos/LOGOS-05.png`,
+  `${PUBLIC_URL}/img/logos/LOGOS-06.png`,
+  `${PUBLIC_URL}/img/logos/LOGOS-07.png`,
+  `${PUBLIC_URL}/img/logos/LOGOS-08.png`,
+  `${PUBLIC_URL}/img/logos/LOGOS-09.png`,
+  `${PUBLIC_URL}/img/logos/LOGOS-10.png`,
+  `${PUBLIC_URL}/img/logos/LOGOS-11.png`,
+  `${PUBLIC_URL}/img/logos/LOGOS-12.png`,
+  `${PUBLIC_URL}/img/logos/LOGOS-13.png`,
+  `${PUBLIC_URL}/img/logos/LOGOS-14.png`,
+  `${PUBLIC_URL}/img/logos/LOGOS-15.png`,
+  `${PUBLIC_URL}/img/logos/LOGOS-16.png`,
+  `${PUBLIC_URL}/img/logos/LOGOS-17a.png`,
+  `${PUBLIC_URL}/img/logos/LOGOS-18.png`,
+];
