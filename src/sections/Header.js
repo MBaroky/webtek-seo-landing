@@ -1,25 +1,38 @@
-import FixedRight from "../components/FixedRight";
+// import FixedRight from "../components/FixedRight";
 import MainNav from "../components/MainNav";
 import MobileNav from "../components/MobileNav";
-import BookSheet from "../components/BookSheet";
+// import BookSheet from "../components/BookSheet";
+// import { Button } from "../components/ui/button";
+import { Mail, Phone } from "lucide-react";
 
 function Header({ logo }) {
   return (
     <header
-      id='main-header'
-      className='flex justify-center items-center px-16 py-2 font-medium text-white bg-neutral-900 max-md:px-5 fixed top-0 left-0 w-full z-50'>
-      <div id='top' />
-      <FixedRight />
-      <div className='flex gap-5 items-center w-full max-w-[1196px] max-md:flex-wrap max-md:max-w-full'>
-        <a href='/' className='flex-auto shrink my-auto'>
-          <img src={logo} alt='logo' className='max-h-[80px]' />
+      id="main-header"
+      className="text-dark fixed left-0 top-0 z-50 flex w-full items-center justify-center bg-neutral-900 px-16 py-2 font-medium max-md:px-5"
+    >
+      <div id="top" />
+      {/* <FixedRight /> */}
+      <div className="flex w-full max-w-[1196px] items-center justify-between gap-5 max-md:max-w-full max-md:flex-wrap">
+        <a href="/" className="my-auto shrink">
+          <img
+            src={logo}
+            alt="logo"
+            className="aspect-video max-h-[80px] object-cover brightness-0 grayscale"
+          />
         </a>
         <MainNav />
         <MobileNav logo={logo} />
-      </div>
-      <div className='hidden lg:inline'>
-        {/* <BookButton /> */}
-        <BookSheet />
+        <div className="hidden lg:inline">
+          <a href="tel:+97155 123 4534" className="me-5 inline">
+            <Phone className="me-2 inline" size="18" />
+            +97155 123 4534
+          </a>
+          <a href="mailto:email@gmail.com" className="inline">
+            <Mail className="me-2 inline" size="18" />
+            email@gmail.com
+          </a>
+        </div>
       </div>
     </header>
   );
