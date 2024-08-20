@@ -9,7 +9,7 @@ function Header({ logo }) {
   return (
     <header
       id="main-header"
-      className="text-dark fixed left-0 top-0 z-50 flex w-full items-center justify-center bg-neutral-900 px-16 py-2 font-medium max-md:px-5"
+      className="text-dark fixed left-0 top-0 z-50 flex w-full items-center justify-center px-16 py-2 font-medium max-md:px-5"
     >
       <div id="top" />
       {/* <FixedRight /> */}

@@ -1,30 +1,43 @@
 :root {
     --text-stroke-shadow: 0px 1px 1px #fff, 0px -1px 1px #fff, 1px 0px 1px #fff, -1px 0px 1px #fff;
     --text-stroke-shadow-black: 0px 1px 1px #000, 0px -1px 1px #000, 1px 0px 1px #000, -1px 0px 1px #000;
-    --main-color:#6D28D9;
-    --transition:all 400ms ease-in-out;
+    --main-color: #6D28D9;
+    --transition: all 400ms ease-in-out;
 }
-.services-item img, .services-item .services-item-title {
+
+body {
+    background-color: #fff;
+}
+
+.services-item img,
+.services-item .services-item-title {
     transition: var(--transition);
 }
-.services-item:hover{
+
+.services-item:hover {
     cursor: pointer;
 }
-.services-item:hover .services-item-title{
+
+.services-item:hover .services-item-title {
     color: var(--main-color);
 }
-.services-item:hover img{
+
+.services-item:hover img {
     transform: scale(1.2);
 }
+
 .industries-item:hover {
     color: var(--main-color);
     cursor: pointer;
 }
-.industries-item img, .industries-item{
+
+.industries-item img,
+.industries-item {
     transition: var(--transition);
 
 }
-.industries-item:hover img{
+
+.industries-item:hover img {
     filter: brightness(0) saturate(100%) invert(17%) sepia(67%) saturate(5079%) hue-rotate(261deg) brightness(87%) contrast(97%);
 }
 

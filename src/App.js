@@ -14,8 +14,15 @@ import WelcomeSection from "./sections/WelcomeSection";
 import logo from "./assets/logo.png";
 
 function App() {
+  const { PUBLIC_URL } = process.env;
   return (
-    <main>
+    <main className="relative">
+      <div
+        className="x-0 y-0 z-index-[-1] absolute h-full w-full"
+        style={{
+          backgroundImage: `url("${PUBLIC_URL}/img/body-bg.png")`,
+        }}
+      ></div>
       <Header logo={logo} />
       <WelcomeSection />
       <Portfolio />
