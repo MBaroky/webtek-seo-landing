@@ -23,18 +23,20 @@ export function LogosCarousel() {
           delay: 2000,
         }),
       ]}
-      className='w-full  mt-5'>
-      <CarouselContent className='-ml-1'>
+      className="mt-5 w-full  bg-black"
+    >
+      <CarouselContent className="-ml-1">
         {logos?.map((url, index) => (
           <CarouselItem
             key={index}
-            className='pl-1 basis-1/3 md:basis-1/4 lg:basis-2/12'>
-            <div className='p-1'>
-              <div className='flex aspect-video items-center justify-center '>
+            className="basis-1/3 pl-1 md:basis-1/4 lg:basis-2/12"
+          >
+            <div className="p-1">
+              <div className="flex aspect-video items-center justify-center ">
                 <img
                   style={{ filter: "grayscale(1) invert(1)" }}
                   src={url}
-                  alt=''
+                  alt=""
                 />
               </div>
             </div>

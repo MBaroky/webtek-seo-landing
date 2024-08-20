@@ -1,29 +1,30 @@
 import * as React from "react";
-import BookSheet from "../components/BookSheet";
+import BookSheet from "../components/HeaderForm";
 import rightArrow from "../assets/right-arrow.svg";
 import { Button } from "../components/ui/button";
 
 function FAQItem({ question, answer }) {
   return (
-    <div className='flex flex-col w-full '>
-      <h3 className='mt-5 text-xl max-md:max-w-full'>{question}</h3>
-      <div className='mt-3.5 text-sm max-md:max-w-full'>{answer}</div>
-      <div className='flex gap-2 mt-4'>
+    <div className="flex w-full flex-col ">
+      <h3 className="mt-5 text-xl max-md:max-w-full">{question}</h3>
+      <div className="mt-3.5 text-sm max-md:max-w-full">{answer}</div>
+      <div className="mt-4 flex gap-2">
         <BookSheet>
           <Button
-            variant='gohst'
-            className='flex px-0 justify-between gap-2 self-start mt-4'>
+            variant="gohst"
+            className="mt-4 flex justify-between gap-2 self-start px-0"
+          >
             <div>Read More</div>
             <img
-              loading='lazy'
+              loading="lazy"
               src={rightArrow}
-              className='shrink-0 w-5 aspect-square'
-              alt=''
+              className="aspect-square w-5 shrink-0"
+              alt=""
             />
           </Button>
         </BookSheet>
       </div>
-      <hr className='shrink-0 self-stretch mt-3.5 h-px border border-solid bg-neutral-900 border-neutral-900 max-md:max-w-full' />
+      <hr className="mt-3.5 h-px shrink-0 self-stretch border border-solid border-neutral-900 bg-neutral-900 max-md:max-w-full" />
     </div>
   );
 }
@@ -31,20 +32,17 @@ function FAQItem({ question, answer }) {
 export default function FAQ() {
   const faqData = [
     {
-      question:
-        "1.	What's Involved In Website Design And Development Services?",
+      question: "1.	What's Involved In Website Design And Development Services?",
       answer:
         "Website design and development services create and build websites for businesses or individuals, covering everything from how they look to how they function online.",
     },
     {
-      question:
-        "2.	How does a good website design benefit your business?",
+      question: "2.	How does a good website design benefit your business?",
       answer:
         "A well-designed website can enhance your business by attracting more customers, improving user experience, and increasing credibility and trustworthiness online.",
     },
     {
-      question:
-        "3.	How can a well-designed website help your business?",
+      question: "3.	How can a well-designed website help your business?",
       answer:
         "A well-designed website can help your business by attracting more visitors, increasing customer engagement, and improving conversion rates, ultimately leading to higher sales and greater online visibility.",
     },
@@ -63,24 +61,19 @@ export default function FAQ() {
   ];
 
   return (
-    <section className='rounded-br-3xl rounded-bl-3xl -mb-5   relative z-[2] flex justify-center items-center px-16 py-16 text-base font-medium bg-gray-200 rounded-none text-neutral-900 max-md:px-5'>
-      <div className='flex flex-col items-start w-full max-w-[1200px] max-md:max-w-full'>
-        <div className='shrink-0 bg-violet-700 h-[3px] w-[45px]' />
-        <h2 className='mt-4'>FAQs</h2>
-        <p className='mt-4 text-sm w-[371px]'>
-          Our dynamic digital marketing agency has empowered a wide
-          array of businesses and organizations to meet their
-          advertising goals. Drawing from rich experience across
-          various industries, we possess the insights and skills to
-          unlock your true potential.
+    <section className="relative z-[2] -mb-5   flex items-center justify-center rounded-none rounded-bl-3xl rounded-br-3xl bg-gray-200 px-16 py-16 text-base font-medium text-neutral-900 max-md:px-5">
+      <div className="flex w-full max-w-[1200px] flex-col items-start max-md:max-w-full">
+        <div className="h-[3px] w-[45px] shrink-0 bg-violet-700" />
+        <h2 className="mt-4">FAQs</h2>
+        <p className="mt-4 w-[371px] text-sm">
+          Our dynamic digital marketing agency has empowered a wide array of
+          businesses and organizations to meet their advertising goals. Drawing
+          from rich experience across various industries, we possess the
+          insights and skills to unlock your true potential.
           <br />
         </p>
         {faqData.map((faq, index) => (
-          <FAQItem
-            key={index}
-            question={faq.question}
-            answer={faq.answer}
-          />
+          <FAQItem key={index} question={faq.question} answer={faq.answer} />
         ))}
       </div>
     </section>

@@ -1,14 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 :root {
     --text-stroke-shadow: 0px 1px 1px #fff, 0px -1px 1px #fff, 1px 0px 1px #fff, -1px 0px 1px #fff;
     --text-stroke-shadow-black: 0px 1px 1px #000, 0px -1px 1px #000, 1px 0px 1px #000, -1px 0px 1px #000;
     --main-color: #6D28D9;
+    --theme-yellow: #FDC00F;
     --transition: all 400ms ease-in-out;
 }
 
 body {
     background-color: #fff;
+    font-family: "Inter", sans-serif;
 }
 
+.yellow-bg {
+    background-color: var(--theme-yellow);
+}
+
+.yellow-border {
+    border-color: var(--theme-yellow);
+}
+
+.text-marker {
+    position: relative;
+}
+
+.text-marker:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: var(--theme-yellow);
+    z-index: -1;
+    opacity: 0.35;
+}
+
+/* old stuff */
 .services-item img,
 .services-item .services-item-title {
     transition: var(--transition);
