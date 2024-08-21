@@ -25,6 +25,10 @@ body {
     position: relative;
 }
 
+p mark {
+    background-color: rgba(253, 192, 15, 0.35) !important;
+}
+
 .text-marker:before {
     content: "";
     position: absolute;

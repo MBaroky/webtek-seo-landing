@@ -12,6 +12,7 @@ import Team from "./sections/Team";
 import Testimonials from "./sections/Testimonials";
 import WelcomeSection from "./sections/WelcomeSection";
 import logo from "./assets/logo.png";
+import About from "./sections/About";
 
 function App() {
   const { PUBLIC_URL } = process.env;
@@ -26,6 +27,7 @@ function App() {
       ></div>
       <Header logo={logo} />
       <WelcomeSection />
+      <About />
       <Portfolio />
       <Team />
       <Services />

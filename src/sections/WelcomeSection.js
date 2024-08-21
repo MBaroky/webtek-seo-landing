@@ -28,14 +28,13 @@ function WelcomeSection() {
               SEO Conversion Experts
             </h1>
             <p className="mb-8">
-              <span className="text-marker">Webtek Digital</span> is the
-              conversion-best SEO agency that helps global brands attract and
-              convert more customers from Google Search.
+              <mark>Webtek Digital</mark> is the conversion-best SEO agency that
+              helps global brands attract and convert more customers from Google
+              Search.
             </p>
             <p className="mb-8">
-              Specializing in{" "}
-              <span className="text-marker">advanced SEO strategies</span>, we
-              combine content marketing, digital PR, technical SEO, and CRO in a
+              Specializing in <mark>advanced SEO strategies</mark>, we combine
+              content marketing, digital PR, technical SEO, and CRO in a
               complete end-to-end service that has generated more revenue for
               our clients than most agencies have client accounts.
             </p>
