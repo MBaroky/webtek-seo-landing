@@ -4,15 +4,15 @@ import FAQ from "./sections/FAQ";
 import Footer from "./sections/Footer";
 import Goal from "./sections/Goal";
 import Header from "./sections/Header";
-import Industries from "./sections/Industries";
 import OurWorks from "./sections/OurWorks";
 import Portfolio from "./sections/Portfolio";
-import Services from "./sections/Services";
 import Team from "./sections/Team";
 import Testimonials from "./sections/Testimonials";
 import WelcomeSection from "./sections/WelcomeSection";
 import logo from "./assets/logo.png";
 import About from "./sections/About";
+import Industries from "./sections/Industries";
+import Services from "./sections/Services";
 
 function App() {
   const { PUBLIC_URL } = process.env;
@@ -28,11 +28,11 @@ function App() {
       <Header logo={logo} />
       <WelcomeSection />
       <About />
+      <Services />
       <Portfolio />
       <Team />
-      <Services />
-      <OurWorks />
       <Industries />
+      <OurWorks />
       <Testimonials />
       <Clients />
       <Goal />
