@@ -26,7 +26,7 @@ function About() {
               Experts in Conversion-Driven Strategies
             </p>
 
-            <hr class="yellow-bg h-1 w-[80px] border-t-0 dark:bg-white/10" />
+            <hr className="yellow-bg h-1 w-[80px] border-t-0 dark:bg-white/10" />
           </div>
           {/* column 1/2 */}
           <div className="relative isolate z-10 mb-8 flex  w-[50%]  flex-col max-md:ml-0 max-md:w-full">

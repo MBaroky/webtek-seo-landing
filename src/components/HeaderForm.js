@@ -36,7 +36,7 @@ export default function HeaderForm({ children }) {
       <div className="flex w-full justify-center text-2xl font-semibold max-md:max-w-full max-md:flex-wrap">
         <h1 className="text-black">Get A Free SEO Audit</h1>
       </div>
-      <hr class="yellow-bg my-2 h-1 w-[80px] border-t-0 dark:bg-white/10" />
+      <hr className="yellow-bg my-2 h-1 w-[80px] border-t-0 dark:bg-white/10" />
       <p className="mt-3 w-[300px] text-center text-black">
         Please share the details below to get started with our services.
       </p>

@@ -1,18 +1,13 @@
 import "./App.css";
-import Clients from "./sections/Clients";
-import FAQ from "./sections/FAQ";
 import Footer from "./sections/Footer";
-import Goal from "./sections/Goal";
 import Header from "./sections/Header";
-import OurWorks from "./sections/OurWorks";
-import Portfolio from "./sections/Portfolio";
-import Team from "./sections/Team";
-import Testimonials from "./sections/Testimonials";
+import Clients from "./sections/Clients";
 import WelcomeSection from "./sections/WelcomeSection";
 import logo from "./assets/logo.png";
 import About from "./sections/About";
 import Industries from "./sections/Industries";
 import Services from "./sections/Services";
+import Mission from "./sections/Mission";
 
 function App() {
   const { PUBLIC_URL } = process.env;
@@ -29,14 +24,9 @@ function App() {
       <WelcomeSection />
       <About />
       <Services />
-      <Portfolio />
-      <Team />
-      <Industries />
-      <OurWorks />
-      <Testimonials />
+      <Mission />
       <Clients />
-      <Goal />
-      <FAQ />
+      <Industries />
       <Footer logo={logo} />
     </main>
   );

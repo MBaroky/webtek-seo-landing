@@ -9,8 +9,8 @@ function ServicesItem({ icon, title, desc }) {
       <div className="flex w-full flex-col items-center justify-start gap-3 bg-white px-5 py-8 text-center">
         <img src={icon} className="h-[70px] w-auto" alt="" />
         <h6 className="font-bold">{title}</h6>
-        <hr class="yellow-bg h-1 w-[80px] border-t-0 dark:bg-white/10" />
-        <p className="w-1/2">
+        <hr className="yellow-bg h-1 w-[80px] border-t-0 dark:bg-white/10" />
+        <p className="max-w-[200px]">
           <small>{desc}</small>
         </p>
       </div>
@@ -71,8 +71,9 @@ function Services() {
         {/* row */}
         <div className="flex items-stretch gap-5 px-16 max-lg:px-5 max-md:flex-col max-md:gap-0">
           {/* column 1/3 */}
-          {items.map((item) => (
+          {items.map((item, index) => (
             <ServicesItem
+              key={index}
               icon={item.icon}
               title={item.title}
               desc={item.desc}
