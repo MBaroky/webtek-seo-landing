@@ -152,7 +152,15 @@ const Carousel = React.forwardRef(
     }, []);
 
     React.useEffect(() => {
-      if (api) api.on("slidesInView", logSlidesInView);
+      if (api) api.on("settle", logSlidesInView);
+    }, [api, logSlidesInView]);
+    React.useEffect(() => {
+      if (api)
+        api.on("slidesInView", () => {
+          api.slideNodes().forEach((slide) => {
+            slide.classList.remove("current");
+          });
+        });
     }, [api, logSlidesInView]);
 
     // end custom events

@@ -32,10 +32,7 @@ function Clients() {
   return (
     <section
       id="clients"
-      className="relative z-[10] -mb-3 flex min-h-[450px] flex-col items-center px-3 pt-24 tracking-tighter max-md:text-4xl md:p-24"
-      style={{
-        backgroundColor: "#F7F7F7",
-      }}
+      className="relative z-[10] -mb-3 flex min-h-[600px] flex-col items-center px-3 pt-24 tracking-tighter max-md:text-4xl md:p-24"
     >
       <div className="max-w-full  lg:max-w-[1200px]">
         <h2 className=" w-full text-6xl font-bold uppercase leading-[1.2em] text-neutral-900 max-md:max-w-full max-md:text-4xl max-md:leading-[1em]">

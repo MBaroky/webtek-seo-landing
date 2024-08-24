@@ -29,7 +29,7 @@ function HeroSection({ title, body }) {
 
 export default function ClientsSlider({ data }) {
   return (
-    <div className="realtive my-8 flex flex-col xl:left-[50%] xl:min-w-[98vw] xl:translate-x-[-50%]">
+    <div className="realtive my-8 flex flex-col xl:absolute xl:left-[50%] xl:min-w-[1280px] xl:translate-x-[-50%]">
       <div className="w-full max-md:max-w-full">
         <Carousel
           opts={{
@@ -39,7 +39,7 @@ export default function ClientsSlider({ data }) {
           }}
           plugins={[
             Autoplay({
-              delay: 6000,
+              delay: 12000,
             }),
           ]}
           className="shadcn-slider mt-5 w-full"
