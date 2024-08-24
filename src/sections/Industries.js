@@ -1,5 +1,6 @@
 import * as React from "react";
 import ServiceSlider from "../components/ServiceSlider";
+import { MoveUpRightIcon } from "lucide-react";
 
 export default function Industries() {
   return (
@@ -15,18 +16,27 @@ export default function Industries() {
         <div className="relative flex gap-5 px-16 max-lg:px-5 max-md:flex-col  max-md:gap-0">
           <div className="basis-3/4">
             <h1 className="mb-8 text-6xl font-bold uppercase   leading-none max-md:mt-10 max-md:max-w-full max-md:text-4xl">
-              Our Services
+              Industries We Serve
             </h1>
+            <p>
+              At Webtek Digital, we partner with diverse industries to enhance
+              their online visibility and generate more leads.
+            </p>
+
+            <hr className="yellow-bg h-1 w-[80px] border-t-0 dark:bg-white/10" />
           </div>
           <div className="basis-1/4">
-            <p className="mb-8">
-              At Webtek Digital, we provide a full range of SEO services to
-              boost your online presence and drive business growth. Our expert
-              team employs advanced techniques to optimize your website, engage
-              your audience, and convert visitors into loyal customers. Discover
-              how our tailored solutions can help you achieve your digital
-              marketing goals.
+            <p className="mb-8 text-sm">
+              <mark>We ensure your website attracts visitors</mark> effectively.
+              Our tailored solutions help your business stand out in search
+              results, driving growth and success. Let us elevate your digital
+              presence and bring your goals to fruition.
             </p>
+
+            <button className="yellow-bg inline-flex aspect-square w-[150px] items-center justify-center rounded-full">
+              Read More
+              <MoveUpRightIcon />
+            </button>
           </div>
         </div>
         <div className="max-w-full">

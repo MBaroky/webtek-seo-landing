@@ -13,8 +13,8 @@ import {
 
 export default function ServiceSlider() {
   return (
-    <div className='flex flex-col'>
-      <div className='w-full'>
+    <div className="flex flex-col">
+      <div className="w-full">
         <Carousel
           opts={{
             breakpoints: {
@@ -28,12 +28,11 @@ export default function ServiceSlider() {
               delay: 2000,
             }),
           ]}
-          className='w-full  mt-5'>
-          <CarouselContent className='-ml-1 lg:flex lg:flex-wrap lg:w-full mt-9 lg:flex-row lg:items-stretch'>
+          className="mt-5  w-full"
+        >
+          <CarouselContent className="-ml-1 mb-8 mt-9 lg:flex lg:w-full  lg:flex-row lg:items-stretch">
             {servicesList.map((service, index) => (
-              <CarouselItem
-                key={index}
-                className='pl-3 mb-2 max-w-[280px] lg:basis-1/4'>
+              <CarouselItem key={index} className="mb-2 pl-3 md:basis-1/3">
                 <Service
                   img={service.img}
                   icon={service.icon}
