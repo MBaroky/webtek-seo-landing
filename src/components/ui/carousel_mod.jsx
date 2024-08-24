@@ -95,16 +95,67 @@ const Carousel = React.forwardRef(
       };
     }, [api, onSelect]);
 
-    // put events here
+    //  TODO:custom events
 
     const logSlidesInView = React.useCallback((api) => {
-      const count = api.slidesInView().length;
-      count < 4 && console.log(api.slidesInView());
+      const inViewSlides = api.slidesInView(true);
+      const slides = api.slideNodes();
+
+      if (slides.length > 0) {
+        const count = slides.length;
+        function findMedian(arr) {
+          arr.sort((a, b) => a - b);
+          const middleIndex = Math.floor(arr.length / 2);
+
+          if (arr.length % 2 === 0) {
+            return (arr[middleIndex - 1] + arr[middleIndex]) / 2;
+          } else {
+            return arr[middleIndex];
+          }
+        }
+        // const reset = (arr) =>
+
+        const setCurrent = (i) => {
+          slides.forEach((slide, index) => {
+            if (i === index) {
+              slide.classList.add("current");
+              console.log(slide);
+            } else {
+              slide.classList.remove("current");
+              // console.log(slide);
+            }
+          });
+        };
+
+        if (inViewSlides.length === 3) {
+          // last and first are visible
+          if (inViewSlides.includes(0) && inViewSlides.includes(count - 1)) {
+            // 2nd to last, last and 1st
+            if (inViewSlides.includes(count - 2)) {
+              console.log(count);
+              setCurrent(count - 1);
+            } else {
+              // last, 1st and 2nd
+              console.log(1);
+              // reset(slides);
+              setCurrent(0);
+            }
+          } else {
+            console.log(findMedian(inViewSlides) + 1);
+            // reset(slides);
+            setCurrent(findMedian(inViewSlides));
+          }
+        } else {
+          setCurrent(-1);
+        }
+      }
     }, []);
 
     React.useEffect(() => {
       if (api) api.on("slidesInView", logSlidesInView);
     }, [api, logSlidesInView]);
+
+    // end custom events
 
     return (
       <CarouselContext.Provider
@@ -264,13 +315,16 @@ const CarouselDots = React.forwardRef((props, ref) => {
 
   if (numberOfSlides > 1) {
     return (
-      <div ref={ref} className={`flex justify-center ${props.className}`}>
+      <div
+        ref={ref}
+        className={`relative flex justify-center ${props.className}`}
+      >
         {Array.from({ length: numberOfSlides }, (_, i) => (
           <Button
             key={i}
-            className={`mx-1 h-1.5 w-1.5 rounded-full p-0 ${
+            className={`mx-2 h-1.5 w-1.5 rounded-full p-0 ${
               i === currentSlide
-                ? "scale-125 transform bg-gray-500 hover:bg-gray-500"
+                ? "min-w-12 scale-125 transform bg-gray-500 hover:bg-gray-500"
                 : "bg-gray-300 hover:bg-gray-300"
             }`}
             aria-label={`Go to slide ${i + 1}`}

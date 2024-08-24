@@ -18,7 +18,7 @@ function About() {
           </p>
         </div>
         {/* row */}
-        <div className="flex gap-5 px-16 max-lg:px-5 max-md:flex-col-reverse max-md:gap-0">
+        <div className="flex items-start gap-5 px-16 max-lg:px-5 max-md:flex-col-reverse max-md:gap-0">
           {/* column 1/4 */}
           <div className="relative z-10 flex min-h-[300px] w-[25%] flex-col pb-8 max-md:ml-0 max-md:w-full">
             <p className="">
@@ -29,7 +29,7 @@ function About() {
             <hr className="yellow-bg h-1 w-[80px] border-t-0 dark:bg-white/10" />
           </div>
           {/* column 1/2 */}
-          <div className="relative isolate z-10 mb-8 flex  w-[50%]  flex-col max-md:ml-0 max-md:w-full">
+          <div className="relative isolate z-10 mb-8 flex w-[50%]  flex-col max-md:ml-0 max-md:w-full">
             {/* stroke behind */}
             <div className="absolute inset-0 -z-10 h-full w-full rotate-3 border border-solid border-black"></div>
             <span className="relative overflow-clip">

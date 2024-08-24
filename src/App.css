@@ -25,6 +25,34 @@ body {
     position: relative;
 }
 
+#clients .shadcn-slider>div {
+    overflow-y: visible;
+    overflow-x: clip;
+}
+
+#clients .shadcn-slider-item {
+    position: relative;
+}
+
+#clients .shadcn-slider-item.current {
+    z-index: 1000;
+}
+
+#clients .shadcn-slider-item .slider_item_inner {
+    transition: transform 200ms ease-in-out;
+    background-color: #f1f1f1;
+}
+
+#clients .shadcn-slider-item.current .slider_item_inner {
+    /* transform: scale(1.5) translateZ(3px) !important; */
+    background-color: #fff;
+    transform: scale(1.25);
+    left: 0;
+    min-width: 150%;
+    margin-left: -25%;
+
+}
+
 p mark {
     background-color: rgba(253, 192, 15, 0.35) !important;
 }

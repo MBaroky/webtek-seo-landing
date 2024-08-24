@@ -14,13 +14,13 @@ import {
 // import arrowRight from "../assets/works-arrow-right.svg";
 // import arrowLeft from "../assets/works-arrow-left.svg";
 
-function HeroSection({ title, backgroundImage }) {
+function HeroSection({ title, body }) {
   return (
-    <section className="flex aspect-video flex-col max-md:ml-0 max-md:w-full">
-      <div className="flex grow flex-col justify-center text-3xl font-bold leading-10 text-white max-md:mt-8 max-md:max-w-full">
-        <div className="relative flex-col overflow-hidden px-0 max-md:max-w-full max-md:pl-5 max-md:pr-8 max-md:pt-10">
-          <img src={backgroundImage} alt="" className="  inset-0 w-full" />
-          <h2 className="absolute bottom-5 z-10 px-5 text-xl">{title}</h2>
+    <section className="flex aspect-[3/1] flex-col  p-5 py-8  max-md:ml-0 max-md:w-full">
+      <div className="text-dark flex grow flex-col justify-center   max-md:max-w-full">
+        <div className="relative flex-col overflow-hidden px-0 leading-none max-md:max-w-full max-md:pt-10">
+          <p className="py-5 text-sm first-letter:text-yellow-400">{title}</p>
+          <p className="text-xs">{body}</p>
         </div>
       </div>
     </section>
@@ -29,37 +29,39 @@ function HeroSection({ title, backgroundImage }) {
 
 export default function ClientsSlider({ data }) {
   return (
-    <div className="flex flex-col">
+    <div className="realtive my-8 flex flex-col xl:left-[50%] xl:min-w-[98vw] xl:translate-x-[-50%]">
       <div className="w-full max-md:max-w-full">
         <Carousel
           opts={{
             align: "start",
-            // loop: true,
+            loop: true,
+            // dragFree: true,
           }}
-          plugins={
-            [
-              // Autoplay({
-              //   delay: 2000,
-              // }),
-            ]
-          }
-          className="mt-5  w-full"
+          plugins={[
+            Autoplay({
+              delay: 6000,
+            }),
+          ]}
+          className="shadcn-slider mt-5 w-full"
         >
-          <CarouselContent className="-ml-3">
+          <CarouselContent className="shadcn-slider-wrapper -ml-3">
             {data.map((section, index) => (
-              <CarouselItem key={index} className="pl-3  lg:basis-1/3">
-                <div className="flex aspect-video gap-5 max-md:flex-col max-md:gap-0">
+              <CarouselItem
+                key={index}
+                className="shadcn-slider-item  pl-3 xl:basis-1/3"
+              >
+                <div className="slider_item_inner flex gap-5 max-md:flex-col max-md:gap-0">
                   <HeroSection
                     key={index}
                     title={section.title}
-                    backgroundImage={section.backgroundImage}
+                    body={section.body}
                   />
                 </div>
               </CarouselItem>
             ))}
           </CarouselContent>
 
-          <div className="mx-auto  mt-10 flex max-w-[350px] items-center justify-center gap-10">
+          <div className="mx-auto  mt-16 flex max-w-[350px] items-center justify-center gap-10">
             <CarouselDots />
             {/* <CarouselPrevious className="bg-image relative left-auto ml-0 mt-0 w-[120px] border-none bg-transparent">
               <img className="max-w-[120px]" src={arrowLeft} alt="" />
