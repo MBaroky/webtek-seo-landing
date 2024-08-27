@@ -8,6 +8,7 @@ import About from "./sections/About";
 import Industries from "./sections/Industries";
 import Services from "./sections/Services";
 import Mission from "./sections/Mission";
+import Pricing from "./sections/Pricing";
 
 function App() {
   const { PUBLIC_URL } = process.env;
@@ -27,6 +28,7 @@ function App() {
       <Mission />
       <Clients />
       <Industries />
+      <Pricing />
       <Footer logo={logo} />
     </main>
   );

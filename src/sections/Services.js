@@ -1,11 +1,20 @@
-import React from "react";
+import React, { useRef } from "react";
 import seoIcon from "../assets/services-1.svg";
 import contentIcon from "../assets/services-2.svg";
 import croIcon from "../assets/services-3.svg";
+import { useIsVisible } from "../hooks/useIsVisible";
 
-function ServicesItem({ icon, title, desc }) {
+function ServicesItem({ icon, title, desc, index }) {
+  const ref = useRef();
+  const isVisible = useIsVisible(ref);
   return (
-    <div className="relative z-10 flex min-h-[300px] basis-1/3 items-stretch px-3 pb-8 max-md:ml-0 max-md:w-full">
+    <div
+      ref={ref}
+      className={`
+
+       transition-all duration-700 delay-${(index + 1) * 100} max-md:ml-0 max-md:w-full ${isVisible ? "translate-y-0 opacity-100" : "translate-y-20 opacity-0"}
+       relative z-10 flex min-h-[300px] basis-1/3 items-stretch px-3 pb-8 max-md:ml-0 max-md:w-full`}
+    >
       <div className="flex w-full flex-col items-center justify-start gap-3 bg-white px-5 py-8 text-center">
         <img src={icon} className="h-[70px] w-auto" alt="" />
         <h6 className="font-bold">{title}</h6>
@@ -77,6 +86,7 @@ function Services() {
               icon={item.icon}
               title={item.title}
               desc={item.desc}
+              index={index}
             />
           ))}
         </div>
