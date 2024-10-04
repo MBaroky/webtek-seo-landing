@@ -9,13 +9,13 @@ function PricingItem({ item, index }) {
   return (
     <div
       ref={ref}
-      className={`relative z-10 flex min-h-[300px] basis-1/3 items-stretch px-3 pb-8
+      className={`relative z-10 flex min-h-[300px] basis-1/3 items-stretch px-3 pb-8 transition-all
 
-       transition-all duration-700 delay-${(index + 1) * 100} max-md:ml-0 max-md:w-full ${isVisible ? "translate-y-0 opacity-100" : "translate-y-20 opacity-0"}
+       duration-700 delay-${(index + 1) * 100} max-md:ml-0 max-md:w-full ${isVisible ? "translate-y-0 opacity-100" : "translate-y-20 opacity-0"}
 
        `}
     >
-      <div className="flex w-full flex-col items-stretch justify-start gap-3 bg-white p-16 text-start">
+      <div className="flex w-full flex-col items-stretch justify-start gap-3 bg-white p-16 text-start max-lg:p-8">
         <h6 className="text-xl font-bold">{title}</h6>
         <hr className="yellow-bg h-1 w-[80px] border-t-0 dark:bg-white/10" />
         <p className="max-w-[200px]">
@@ -107,7 +107,7 @@ function Pricing() {
           </div>
         </div>
         {/* row */}
-        <div className="flex items-stretch gap-5 px-16 max-lg:px-5 max-md:flex-col max-md:gap-0">
+        <div className="flex items-stretch gap-5 px-16 max-lg:gap-1 max-lg:px-0 max-md:flex-col ">
           {/* column 1/3 */}
           {items.map((item, index) => (
             <PricingItem key={index} item={item} index={index} />
